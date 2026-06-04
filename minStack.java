@@ -39,10 +39,10 @@ class minStackImpl{
 
     public void pop(){
         if(!stack.isEmpty() && Objects.equals(minTracker.getFirst(), stack.getFirst())) {
-            stack.removeFirst();
-            minTracker.removeFirst();
+            stack.pop();
+            minTracker.pop();
         }else if(!stack.isEmpty()){
-            stack.remove(stack.getFirst());
+            stack.pop();
         }
     }
 
